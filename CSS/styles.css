@@ -1,0 +1,146 @@
+body {
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+    display: flex; /* Utiliza el modelo de caja flexible para el diseño */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Establece la altura del cuerpo al 100% de la altura de la ventana */
+    background-color: #2c3e50; /* Color oscuro */ /* Establece el color de fondo a un gris claro */
+}
+
+.clock-container {
+    position: relative; /* Posiciona el contenedor de manera relativa */
+    width: 400px; /* Ancho del contenedor del reloj */
+    height: 400px; /* Altura del contenedor del reloj */
+    border: 10px solid goldenrod; /* Borde dorado */
+    border-radius: 50%; /* Bordes redondeados para formar un círculo */
+    background-image: url(""); /* Fondo de un reloj Rolex */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+}
+
+.clock {
+    position: relative; /* Posiciona el reloj de manera relativa */
+    width: 100%; /* Ancho del reloj al 100% del contenedor */
+    height: 100%; /* Altura del reloj al 100% del contenedor */
+    transform: rotate(0deg); /* Inicialmente no rota el reloj */
+    background-color: rgb(55, 55, 53);
+    border-radius: 50%;
+}
+
+.center {
+    position: absolute; /* Posiciona el centro de manera absoluta */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    width: 10px; /* Ancho del centro */
+    height: 10px; /* Altura del centro */
+    background: black; /* Color de fondo negro */
+    border-radius: 50%; /* Bordes redondeados para formar un círculo */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar el elemento */
+    z-index: 10; /* Asegura que el centro esté por encima de otros elementos */
+}
+
+.hand {
+    position: absolute; /* Posiciona las manecillas de manera absoluta */
+    bottom: 50%; /* Posiciona la base de las manecillas en el centro vertical */
+    left: 50%; /* Centra horizontalmente */
+    transform-origin: bottom center; /* Establece el origen de la transformación en la base de las manecillas */
+    transform: rotate(90deg); /* Rota las manecillas 90 grados */
+    background: black; /* Color de fondo negro */
+}
+
+.date-box {
+    position: absolute;
+    top: 50%;  /* A la altura del número 3 */
+    left: 83%; /* Ajusta la posición justo al lado del número 3 */
+    background-color: rgb(232, 232, 232);
+    border: 2.2px solid gold;
+    color: black;
+    font-size: 28px; /* Tamaño de la fuente */
+    width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Sombra inicial */
+    transition: box-shadow 0.3s ease; /* Transición suave para el efecto */
+}
+
+/* Efecto de hundimiento al hacer clic o presionar */
+.date-box {
+    box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.5); /* Sombra interna para simular hundimiento */
+}
+
+.hour {
+    width: 6px; /* Ancho de la manecilla de la hora */
+    height: 100px; /* Altura de la manecilla de la hora */
+    background: gray; /* Color de fondo verde */
+}
+
+.minute {
+    width: 4px; /* Ancho de la manecilla del minuto */
+    height: 150px; /* Altura de la manecilla del minuto */
+    background: green; /* Color de fondo verde */
+}
+
+.second {
+    width: 2px; /* Ancho de la manecilla del segundo */
+    height: 180px; /* Altura de la manecilla del segundo */
+    background: red; /* Color de fondo rojo */
+}
+
+.number {
+    position: absolute; /* Posiciona los números de manera absoluta */
+    font-size: 26px; /* Tamaño de fuente de los números */
+    color: goldenrod; /* Color dorado para los números */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar los números */
+}
+
+.number1 { 
+    top: 12%; /* Posiciona el número 1 al 12% desde la parte superior del contenedor */
+    left: 72%; /* Centra el número 1 horizontalmente en el contenedor */
+}
+.number2 { 
+    top: 27%;  /* Posiciona el número 2 al 27% desde la parte superior del contenedor */
+    left: 90%;  /* Centra el número 2 horizontalmente en el contenedor */
+}
+.number3 { 
+    top: 50%; /* Posiciona el número 3 al 50% desde la parte superior del contenedor */
+    left: 94%;  /* Centra el número 3 horizontalmente en el contenedor */
+}
+.number4 { 
+    top: 72%;  /* Posiciona el número 4 al 72% desde la parte superior del contenedor */
+    left: 90%;  /* Centra el número 4 horizontalmente en el contenedor */
+}
+.number5 {
+     top: 89%; /* Posiciona el número 5 al 89% desde la parte superior del contenedor */
+     left: 72%;   /* Centra el número 5 horizontalmente en el contenedor */
+    }
+.number6 { 
+    top: 95%;  /* Posiciona el número 6 al 95% desde la parte superior del contenedor */
+    left: 50%;   /* Centra el número 6 horizontalmente en el contenedor */
+}
+.number7 { 
+    top: 89%;  /* Posiciona el número 7 al 89% desde la parte superior del contenedor */
+    left: 25%;   /* Centra el número 7 horizontalmente en el contenedor */
+}
+.number8 { 
+    top: 72%;  /* Posiciona el número 8 al 68% desde la parte superior del contenedor */
+    left: 11%;   /* Centra el número 8 horizontalmente en el contenedor */
+}
+.number9 { 
+    top: 50%;  /* Posiciona el número 9 al 48% desde la parte superior del contenedor */
+    left: 6%;   /* Centra el número 9 horizontalmente en el contenedor */
+}
+.number10 { 
+    top: 27%;  /* Posiciona el número 10 al 27% desde la parte superior del contenedor */
+    left: 11%;   /* Centra el número 10 horizontalmente en el contenedor */
+}
+.number11 { 
+    top: 12%;  /* Posiciona el número 11 al 13% desde la parte superior del contenedor */
+    left: 25%;   /* Centra el número 11 horizontalmente en el contenedor */
+}
+.number12 { 
+    top: 5%;  /* Posiciona el número 12 al 5% desde la parte superior del contenedor */
+    left: 50%;   /* Centra el número 12 horizontalmente en el contenedor */
+}
